@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StandEra — Empowering Students for Real-World Success</title>
+<meta name="description" content="StandEra is a student-focused career development platform offering internship assistance, mock interviews, resume building, and real-world projects.">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="images/logo.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Floating background shapes -->
+<div class="bg-shapes" aria-hidden="true">
+  <span class="shape shape-1"></span>
+  <span class="shape shape-2"></span>
+  <span class="shape shape-3"></span>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="nav-logo">
+      <img src="images/logo.png" alt="StandEra logo" class="logo-img">
+      <span class="logo-text">StandEra</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#opportunities" class="nav-link">Opportunities</a>
+      <a href="#mock-interviews" class="nav-link">Mock Interviews</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#community" class="nav-link">Community</a>
+      <a href="#donate" class="nav-link">Donate</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-slider" id="heroSlider">
+    <div class="slide active" style="background-image:url('images/hero1.jpg')"></div>
+    <div class="slide" style="background-image:url('images/hero2.jpg')"></div>
+    <div class="slide" style="background-image:url('images/hero3.jpg')"></div>
+    <div class="slide" style="background-image:url('images/hero4.jpg')"></div>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <button class="slider-arrow prev" id="prevSlide" aria-label="Previous slide">&#10094;</button>
+  <button class="slider-arrow next" id="nextSlide" aria-label="Next slide">&#10095;</button>
+
+  <div class="slider-dots" id="sliderDots"></div>
+
+  <div class="hero-content">
+    <div class="hero-glass fade-in-up">
+      <p class="eyebrow">Career Readiness, Reimagined</p>
+      <h1>Empowering Students for <span class="text-gradient">Real-World Success</span></h1>
+      <p class="hero-text">StandEra helps students build confidence, gain practical experience, discover internships, improve interview skills, and prepare for successful careers.</p>
+      <div class="hero-buttons">
+        <a href="#registration" class="btn btn-primary">Join StandEra</a>
+        <a href="#opportunities" class="btn btn-secondary">Explore Opportunities</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about section-pad bg-light-blue" id="about">
+  <div class="container">
+    <p class="section-eyebrow">Who We Are</p>
+    <h2 class="section-title">About StandEra</h2>
+
+    <div class="glass-card about-card reveal">
+      <p>StandEra is a career development platform dedicated to helping students become internship and job ready. We provide real-world project opportunities that help students gain practical experience and build strong portfolios.</p>
+      <p>Through personalized mock interviews, we evaluate candidates, provide detailed performance analysis, and offer constructive feedback to improve their confidence and interview skills.</p>
+      <p>StandEra also helps students find internships that match their skills, interests, and career goals. In addition, we assist with creating professional, ATS-friendly resumes and provide training in resume writing, interview techniques, communication, and workplace skills.</p>
+      <p>By combining practical experience with personalized guidance, StandEra bridges the gap between education and employment, empowering students to confidently begin their professional journey.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPPORTUNITIES ============ -->
+<section class="opportunities section-pad bg-navy-gradient" id="opportunities">
+  <div class="container">
+    <p class="section-eyebrow light">What We Offer</p>
+    <h2 class="section-title light">Opportunities</h2>
+
+    <div class="cards-grid">
+      <div class="opp-card reveal">
+        <div class="opp-icon">🎯</div>
+        <h3>Internship Assistance</h3>
+        <p>Personalized guidance to help you find internships matched to your goals.</p>
+      </div>
+      <div class="opp-card reveal">
+        <div class="opp-icon">📄</div>
+        <h3>Resume Building</h3>
+        <p>Craft professional, ATS-friendly resumes that get noticed by recruiters.</p>
+      </div>
+      <div class="opp-card reveal">
+        <div class="opp-icon">🎤</div>
+        <h3>Mock Interviews</h3>
+        <p>Practice with real feedback to walk into interviews with confidence.</p>
+      </div>
+      <div class="opp-card reveal">
+        <div class="opp-icon">🧭</div>
+        <h3>Career Guidance</h3>
+        <p>One-on-one mentorship to help you chart a clear career path.</p>
+      </div>
+      <div class="opp-card reveal">
+        <div class="opp-icon">🚀</div>
+        <h3>Skill Development</h3>
+        <p>Build the communication and workplace skills employers look for.</p>
+      </div>
+      <div class="opp-card reveal">
+        <div class="opp-icon">💡</div>
+        <h3>Real-world Projects</h3>
+        <p>Work on live projects that strengthen your portfolio and experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOCK INTERVIEWS ============ -->
+<section class="mock-interviews section-pad bg-white-soft" id="mock-interviews">
+  <div class="container">
+    <p class="section-eyebrow">Get Interview Ready</p>
+    <h2 class="section-title">Practice Before the Real Interview</h2>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">1</div>
+        <div class="timeline-content">
+          <h3>Performance Analysis</h3>
+          <p>A structured evaluation of how you communicate, present, and respond under pressure.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">2</div>
+        <div class="timeline-content">
+          <h3>Communication Feedback</h3>
+          <p>Detailed notes on clarity, confidence, and tone to sharpen how you express yourself.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">3</div>
+        <div class="timeline-content">
+          <h3>Interview Recording</h3>
+          <p>Where available, review your own recorded session to see your growth first-hand.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">4</div>
+        <div class="timeline-content">
+          <h3>Strengths &amp; Areas for Improvement</h3>
+          <p>A clear breakdown of what's working well and what needs focused practice.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">5</div>
+        <div class="timeline-content">
+          <h3>Personalized Improvement Report</h3>
+          <p>A takeaway report with actionable next steps tailored to you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="projects section-pad bg-light-blue" id="projects">
+  <div class="container">
+    <p class="section-eyebrow">Learn By Doing</p>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="cards-grid three-col">
+      <div class="project-card reveal">
+        <div class="project-number">01</div>
+        <h3>Content Writing</h3>
+        <p>Students research topics and present findings through online sessions.</p>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-number">02</div>
+        <h3>Startup &amp; Community Building</h3>
+        <p>Students contribute to practical initiatives while learning how startups and communities grow.</p>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-number">03</div>
+        <h3>Research Projects</h3>
+        <p>Students collaborate on industry and career research.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGISTRATION ============ -->
+<section class="registration section-pad bg-blue-gradient" id="registration">
+  <div class="container narrow">
+    <div class="glass-card registration-card reveal">
+      <p class="section-eyebrow light">Take The First Step</p>
+      <h2 class="section-title light">Join StandEra Today</h2>
+      <p class="reg-text">Ready to build real experience, sharpen your interview skills, and move closer to the career you want? Applying takes just a few minutes — StandEra will guide you the rest of the way.</p>
+      <a href="https://forms.gle/oYMtUEnxgMg72dwW9" target="_blank" rel="noopener noreferrer" class="btn btn-glow">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY ============ -->
+<section class="community section-pad bg-white-soft" id="community">
+  <div class="container">
+    <p class="section-eyebrow">Stay Connected</p>
+    <h2 class="section-title">Join the StandEra Community</h2>
+    <p class="section-subtext">Learning continues beyond classrooms. Join our communities to connect with students, receive updates, discover opportunities, and grow together.</p>
+
+    <div class="community-grid">
+      <div class="community-card linkedin-card reveal">
+        <div class="community-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </div>
+        <h3>LinkedIn Community</h3>
+        <p>Follow StandEra on LinkedIn for updates, career resources, announcements, and professional networking.</p>
+        <a href="https://www.linkedin.com/company/standera/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-linkedin">Join on LinkedIn</a>
+      </div>
+
+      <div class="community-card whatsapp-card reveal">
+        <div class="community-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.98.58 3.82 1.58 5.37L2 22l4.75-1.55A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.2c-1.72 0-3.32-.5-4.67-1.36l-.34-.2-3.34 1.09 1.11-3.26-.22-.34A8.18 8.18 0 0 1 3.8 12c0-4.53 3.68-8.2 8.2-8.2s8.2 3.67 8.2 8.2-3.68 8.2-8.2 8.2z"/></svg>
+        </div>
+        <h3>WhatsApp Community</h3>
+        <p>Join our WhatsApp Community to stay updated about internships, projects, announcements, discussions, and opportunities.</p>
+        <a href="https://chat.whatsapp.com/KplMQmBaV74I8nySbNIciB" target="_blank" rel="noopener noreferrer" class="btn btn-outline-whatsapp">Join WhatsApp Community</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DONATE ============ -->
+<section class="donate section-pad bg-blue-gradient" id="donate">
+  <div class="container narrow">
+    <p class="section-eyebrow light">Fuel Our Mission</p>
+    <h2 class="section-title light">Support StandEra</h2>
+    <p class="donate-text">StandEra is dedicated to helping students become career-ready through practical learning, internships, mock interviews, career guidance, and real-world projects.</p>
+    <p class="donate-text">If you believe in our mission, you are welcome to support us with any amount. Every contribution helps us create more opportunities for students.</p>
+
+    <a href="#qr-code" class="btn btn-glow">Support StandEra ❤️</a>
+
+    <div class="qr-card reveal" id="qr-code">
+      <img src="images/donation-qr.png" alt="StandEra UPI donation QR code" class="qr-img" loading="lazy">
+      <p class="qr-caption">Scan any UPI app to support StandEra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact section-pad bg-white-soft" id="contact">
+  <div class="container narrow">
+    <p class="section-eyebrow">Get In Touch</p>
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-grid reveal">
+      <a href="mailto:standeraa8626@gmail.com" class="contact-item">
+        <span class="contact-icon">✉️</span>
+        <span>standeraa8626@gmail.com</span>
+      </a>
+      <a href="https://www.linkedin.com/company/standera/" target="_blank" rel="noopener noreferrer" class="contact-item">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </span>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://chat.whatsapp.com/KplMQmBaV74I8nySbNIciB" target="_blank" rel="noopener noreferrer" class="contact-item">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.98.58 3.82 1.58 5.37L2 22l4.75-1.55A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.2c-1.72 0-3.32-.5-4.67-1.36l-.34-.2-3.34 1.09 1.11-3.26-.22-.34A8.18 8.18 0 0 1 3.8 12c0-4.53 3.68-8.2 8.2-8.2s8.2 3.67 8.2 8.2-3.68 8.2-8.2 8.2z"/></svg>
+        </span>
+        <span>WhatsApp Community</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="StandEra logo" class="footer-logo">
+      <h3>StandEra</h3>
+      <p>Making career readiness accessible for every student.</p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#opportunities">Opportunities</a>
+      <a href="#projects">Projects</a>
+      <a href="#community">Community</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/company/standera/" target="_blank" rel="noopener noreferrer" aria-label="StandEra on LinkedIn" class="social-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+      <a href="https://chat.whatsapp.com/KplMQmBaV74I8nySbNIciB" target="_blank" rel="noopener noreferrer" aria-label="StandEra on WhatsApp" class="social-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.98.58 3.82 1.58 5.37L2 22l4.75-1.55A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.2c-1.72 0-3.32-.5-4.67-1.36l-.34-.2-3.34 1.09 1.11-3.26-.22-.34A8.18 8.18 0 0 1 3.8 12c0-4.53 3.68-8.2 8.2-8.2s8.2 3.67 8.2 8.2-3.68 8.2-8.2 8.2z"/></svg>
+      </a>
+      <a href="mailto:standeraa8626@gmail.com" aria-label="Email StandEra" class="social-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 StandEra. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
