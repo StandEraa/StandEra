@@ -815,3 +815,19 @@ a:focus-visible, button:focus-visible{
   .faq-question{ padding: 18px 20px; font-size: 15px; gap: 14px; }
   .faq-answer-inner{ padding: 0 20px 20px; }
 }
+/* ==========================
+   Feedback Section
+========================== */
+
+.feedback-card{
+    max-width:800px;
+    margin:40px auto 0;
+    text-align:center;
+    padding:40px;
+}
+
+.feedback-card p{
+    font-size:1.05rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
