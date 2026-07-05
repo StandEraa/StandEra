@@ -125,4 +125,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ---------------- FAQ accordion (only one open at a time) ---------------- */
+  var faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(function (item) {
+    var question = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', function () {
+      var isOpen = item.classList.contains('active');
+
+      /* Close every item first */
+      faqItems.forEach(function (other) {
+        other.classList.remove('active');
+        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      /* Re-open the clicked one only if it was previously closed */
+      if (!isOpen) {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* Keep the open FAQ answer sized correctly if the viewport is resized */
+  window.addEventListener('resize', function () {
+    var activeItem = document.querySelector('.faq-item.active');
+    if (activeItem) {
+      var openAnswer = activeItem.querySelector('.faq-answer');
+      openAnswer.style.maxHeight = openAnswer.scrollHeight + 'px';
+    }
+  });
+
 });
