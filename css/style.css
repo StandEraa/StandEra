@@ -735,10 +735,140 @@ ul{ list-style: none; margin: 0; padding: 0; }
 /* =========================================================
    FOCUS STATES (ACCESSIBILITY)
    ========================================================= */
-a:focus-visible, button:focus-visible{
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
   outline: 2px solid var(--royal);
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+/* =========================================================
+   REGISTRATION FORM
+   ========================================================= */
+.reg-form{
+  text-align: left;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.form-group label{
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: rgba(255,255,255,0.85);
+}
+
+.form-input,
+.form-select,
+.form-textarea{
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 14.5px;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+.form-input::placeholder,
+.form-textarea::placeholder{ color: rgba(255,255,255,0.55); }
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus{
+  outline: none;
+  border-color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.16);
+}
+
+.form-select option{ color: var(--text-dark); }
+
+.form-textarea{ resize: vertical; min-height: 96px; line-height: 1.6; }
+
+.reg-submit-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 4px;
+}
+.reg-submit-btn:disabled{
+  opacity: 0.7;
+  cursor: not-allowed;
+  animation: none;
+  transform: none !important;
+}
+
+.btn-spinner{
+  width: 17px;
+  height: 17px;
+  border: 2.5px solid rgba(21,101,255,0.25);
+  border-top-color: var(--royal);
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+}
+.btn-spinner[hidden]{ display: none; }
+
+@keyframes spin{
+  to{ transform: rotate(360deg); }
+}
+
+.form-error{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,70,70,0.14);
+  border: 1px solid rgba(255,120,120,0.5);
+  color: #FFE1E1;
+  border-radius: var(--radius-sm);
+  padding: 13px 18px;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.form-error[hidden]{ display: none; }
+
+.form-success{
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: var(--radius-md);
+  padding: 34px 28px;
+  text-align: center;
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.form-success[hidden]{ display: none; }
+
+.form-backup-link{
+  text-align: center;
+  margin: 4px 0 0;
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.7);
+}
+.form-backup-link a{
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.form-backup-link a:hover{ color: #C7E4FF; }
+
+@media (max-width: 600px){
+  .form-input, .form-select, .form-textarea{ padding: 12px 14px; font-size: 14px; }
 }
 
 /* =========================================================

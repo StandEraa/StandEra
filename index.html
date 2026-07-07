@@ -215,7 +215,71 @@
       <p class="section-eyebrow light">Take The First Step</p>
       <h2 class="section-title light">Join StandEra Today</h2>
       <p class="reg-text">Ready to build real experience, sharpen your interview skills, and move closer to the career you want? Applying takes just a few minutes — StandEra will guide you the rest of the way.</p>
-      <a href="https://forms.gle/oYMtUEnxgMg72dwW9" target="_blank" rel="noopener noreferrer" class="btn btn-glow">Apply Now</a>
+
+      <!-- Success state: shown after a successful submission, or on repeat visits via localStorage -->
+      <div class="form-success" id="regSuccess" hidden></div>
+
+      <!-- Registration form -->
+      <form class="reg-form" id="registrationForm" novalidate>
+        <div class="form-error" id="regError" role="alert" hidden></div>
+
+        <div class="form-group">
+          <label for="regName">Full Name</label>
+          <input type="text" id="regName" name="fullName" class="form-input" placeholder="Enter your full name" autocomplete="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" name="email" class="form-input" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+
+       <div class="form-group">
+  <label for="regPhone">Phone Number</label>
+  <input
+    type="tel"
+    id="regPhone"
+    name="phone"
+    class="form-input"
+    placeholder="+91 9876543210"
+    autocomplete="tel"
+    required>
+</div>
+
+        <div class="form-group">
+          <label for="regEducation">Education</label>
+          <select id="regEducation" name="education" class="form-select" required>
+            <option value="" disabled selected>Select your education level</option>
+            <option value="Class 9-10">Class 9–10</option>
+            <option value="Class 11-12">Class 11–12 (Higher Secondary)</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Undergraduate">Undergraduate</option>
+            <option value="Postgraduate">Postgraduate</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="regInstitute">College/School</label>
+          <input type="text" id="regInstitute" name="institute" class="form-input" placeholder="Name of your college or school" autocomplete="organization" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regInterest">Area of Interest</label>
+          <input type="text" id="regInterest" name="interest" class="form-input" placeholder="e.g. Web Development, Marketing, Design" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regReason">Why do you want to join StandEra?</label>
+          <textarea id="regReason" name="reason" class="form-textarea" placeholder="Tell us a little about your goals..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-glow reg-submit-btn" id="regSubmitBtn">
+          <span class="btn-spinner" id="regSpinner" hidden aria-hidden="true"></span>
+          <span id="regSubmitText">Apply Now</span>
+        </button>
+
+        <p class="form-backup-link">Having trouble? <a href="https://forms.gle/oYMtUEnxgMg72dwW9" target="_blank" rel="noopener noreferrer">Register using Google Form.</a></p>
+      </form>
     </div>
   </div>
 </section>

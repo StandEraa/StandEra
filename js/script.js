@@ -160,4 +160,105 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  /* ---------------- Registration form ---------------- */
+  var BACKEND_URL = 'https://script.google.com/macros/s/AKfycbxOXjU22nDsrplxEFHBmi-hN-h6EfM-kRn2Ee01BOBft7fQ6DTiAqBJ7kUMRiRDAqhPPw/exec';
+  var REGISTERED_FLAG = 'standeraRegistered';
+
+  var regForm = document.getElementById('registrationForm');
+
+  if (regForm) {
+    var regSuccessBox = document.getElementById('regSuccess');
+    var regErrorBox = document.getElementById('regError');
+    var regSubmitBtn = document.getElementById('regSubmitBtn');
+    var regSpinner = document.getElementById('regSpinner');
+    var regSubmitText = document.getElementById('regSubmitText');
+
+    function regShowSuccess(message) {
+      regForm.hidden = true;
+      regSuccessBox.textContent = message;
+      regSuccessBox.hidden = false;
+    }
+
+    function regShowError(message) {
+      regErrorBox.textContent = message;
+      regErrorBox.hidden = false;
+    }
+
+    function regHideError() {
+      regErrorBox.hidden = true;
+      regErrorBox.textContent = '';
+    }
+
+    function regSetLoading(isLoading) {
+      regSubmitBtn.disabled = isLoading;
+      regSpinner.hidden = !isLoading;
+      regSubmitText.textContent = isLoading ? 'Submitting...' : 'Apply Now';
+    }
+
+    /* If this browser already registered successfully, keep the form hidden */
+    try {
+      if (localStorage.getItem(REGISTERED_FLAG) === 'true') {
+        regShowSuccess("🎉 You're already registered with StandEra. We'll be in touch soon!");
+      }
+    } catch (storageErr) {
+      /* localStorage unavailable (e.g. private browsing) — fail silently and show the form */
+    }
+
+    regForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      regHideError();
+      regSetLoading(true);
+
+  var payload = {
+  name: regForm.fullName.value.trim(),
+  email: regForm.email.value.trim(),
+  phone: regForm.phone.value.trim(),
+  education: regForm.education.value,
+  college: regForm.institute.value.trim(),
+  interest: regForm.interest.value.trim(),
+  reason: regForm.reason.value.trim()
+};
+
+      fetch(BACKEND_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (response) {
+          return response.text().then(function (rawText) {
+            return { ok: response.ok, raw: rawText };
+          });
+        })
+        .then(function (result) {
+          var data = null;
+          try { data = JSON.parse(result.raw); } catch (parseErr) { data = null; }
+
+          var message = (data && (data.message || data.error || data.result))
+            ? String(data.message || data.error || data.result)
+            : result.raw;
+
+          var isDuplicate = /already registered/i.test(message);
+          var isSuccess = !isDuplicate && (
+            (data && (data.status === 'success' || data.success === true)) ||
+            /success/i.test(message)
+          );
+
+          if (isDuplicate) {
+            regShowError(message);
+          } else if (isSuccess) {
+            regShowSuccess('🎉 Registration Successful! Please check your email.');
+            try { localStorage.setItem(REGISTERED_FLAG, 'true'); } catch (storageErr) { /* ignore */ }
+          } else {
+            regShowError(message || 'Something went wrong. Please try again.');
+          }
+        })
+        .catch(function () {
+          regShowError('Unable to reach the server. Please check your connection and try again.');
+        })
+        .finally(function () {
+          regSetLoading(false);
+        });
+    });
+  }
+
 });
