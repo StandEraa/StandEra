@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* ---------------- Registration form ---------------- */
-  var BACKEND_URL = 'https://script.google.com/macros/s/AKfycbxOXjU22nDsrplxEFHBmi-hN-h6EfM-kRn2Ee01BOBft7fQ6DTiAqBJ7kUMRiRDAqhPPw/exec';
+  var BACKEND_URL = 'https://script.google.com/macros/s/AKfycbx100yXXkk4TAi5N6hSJu1DPxG1jaUXdoDRrSSHXUZvzqJN0sCUXZdMz6TZM8d3-SVqsA/exec';
   var REGISTERED_FLAG = 'standeraRegistered';
 
   var regForm = document.getElementById('registrationForm');
