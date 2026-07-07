@@ -210,13 +210,13 @@ document.addEventListener('DOMContentLoaded', function () {
       regSetLoading(true);
 
   var payload = {
-  name: regForm.fullName.value.trim(),
-  email: regForm.email.value.trim(),
-  phone: regForm.phone.value.trim(),
-  education: regForm.education.value,
-  college: regForm.institute.value.trim(),
-  interest: regForm.interest.value.trim(),
-  reason: regForm.reason.value.trim()
+    name: regForm.fullName.value.trim(),
+    email: regForm.email.value.trim(),
+    phone: regForm.phone.value.trim(),
+    education: regForm.education.value,
+    college: regForm.institute.value.trim(),
+    interest: regForm.interest.value.trim(),
+    reason: regForm.reason.value.trim()
 };
 
       fetch(BACKEND_URL, {
